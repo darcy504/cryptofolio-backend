@@ -6,8 +6,6 @@ class CreateTrades < ActiveRecord::Migration[6.0]
       t.integer :amount
       t.string :currency_symbol
       t.datetime :date
-
-      t.timestamps
     end
   end
 end

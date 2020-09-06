@@ -15,8 +15,6 @@ ActiveRecord::Schema.define(version: 2020_09_06_050044) do
   create_table "portfolios", force: :cascade do |t|
     t.string "name"
     t.integer "balance"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "trades", force: :cascade do |t|
@@ -25,8 +23,6 @@ ActiveRecord::Schema.define(version: 2020_09_06_050044) do
     t.integer "amount"
     t.string "currency_symbol"
     t.datetime "date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
