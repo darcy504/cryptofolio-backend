@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2020_09_06_050044) do
 
   create_table "trades", force: :cascade do |t|
     t.integer "portfolio_id"
-    t.integer "amount"
     t.string "trade_type"
-    t.datetime "date"
+    t.integer "amount"
     t.string "currency_symbol"
+    t.datetime "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
