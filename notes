@@ -14,3 +14,7 @@ Trade
 		:trade_type:string - (did I buy or sell?)
 		:date:datetime - (when did I make the trade?) 
 		:currency_symbol:string - (“BTC”, "LTC", "ETH")
+
+Behavior
+
+	Anytime we make a Trade, we want to update our Portfolio balance
