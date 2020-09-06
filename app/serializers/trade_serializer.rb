@@ -1,3 +1,3 @@
 class TradeSerializer < ActiveModel::Serializer
-  attributes :id, :trade_type, :amount, :currency_symbol, :date, :portfolio_id
+  attributes :id, :portfolio_id :trade_type, :amount, :currency_symbol, :date
 end

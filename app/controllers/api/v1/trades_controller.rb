@@ -3,7 +3,7 @@ class Api::V1::TradesController < ApplicationController
   before_action :set_portfolio
 
   def index
-    @trades = @portfolio.trades 
+    @trades = Trade.all
     render json: @trades
   end
 
