@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   end
 end
 
-# We no longer have access to /api/v1/trades
-# Our trade routes with associate with a specific portfolio
+# We no longer have access to fetch(http://localhost:3000/api/v1/trades)
+# Our trade routes will associate with a specific portfolio
 # Ex:
-# Request -> /api/v1/portfolios/1/trades
+# Request -> fetch(http://localhost:3000/api/v1/portfolios/1/trades)
 # Returns a list of trades for portfolio 1
