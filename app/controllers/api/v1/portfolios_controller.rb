@@ -7,7 +7,12 @@ class Api::V1::PortfoliosController < ApplicationController
   end
 
   def create
-  
+    @portfolio = Portfolio.new(portfolio_params)
+    if @portfolio.save
+      render json: @portfolio
+    else 
+      render json: {error: "Could not create portfolio, please pass valid portfolio params"}
+    end
   end
 
   def show
