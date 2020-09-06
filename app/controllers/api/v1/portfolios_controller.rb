@@ -21,7 +21,8 @@ class Api::V1::PortfoliosController < ApplicationController
   end
 
   def destroy
-  
+    @portfolio = Portfolio.find(params[:id])
+    @portfolio.destroy
   end
 
   private
