@@ -18,3 +18,16 @@ Trade
 Behavior
 
 	Anytime we make a Trade, we want to update our Portfolio balance
+
+Backend Responsibility
+
+	-holds our database (schema)
+	-controllers handles that data and the requests coming in from our frontend
+	-methods handle data manipulation and how we want to render info to user
+
+Frontend Responsibility
+
+	-makes api requests to our backend
+	-we do not actually make changes on the frontend
+	-we send down info from the frontend that makes changes to our database on the backend
+	-forms enable us to submit new info to update database
