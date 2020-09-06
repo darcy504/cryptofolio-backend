@@ -1,2 +1,2 @@
-class TradesController < ApplicationController
+class Api::V1::TradesController < ApplicationController
 end
