@@ -7,11 +7,17 @@ class Api::V1::TradesController < ApplicationController
   end
 
   def create
-
+    @trade = Trade.new(trade_params)
+    if @trade.save
+      render json: @trade
+    else 
+      render json: {error: "Could not complete trade, please pass valid trade params"}
+    end
   end
 
   def show
-
+    @trade = Trade.find(params[:id])
+    render json: @trade
   end
 
   def destroy
