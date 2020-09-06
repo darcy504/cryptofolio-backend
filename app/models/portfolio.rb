@@ -17,7 +17,7 @@ class Portfolio < ApplicationRecord
         self.balance = self.balance - trade.amount
         self.save
       else 
-        return "Uh, oh! Looks like you don't have enough currency to sell."
+        return "Insufficient balance."
       end
     end
   end
