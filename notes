@@ -1,0 +1,16 @@
+Portfolio
+	has_many :trades
+
+  Attributes
+		:name:string(Bitcoin, Litecoin, Ethereum)
+		:balance:integer(amount of cointype in portfolio)
+
+Trade 
+	belongs_to :portfolio
+
+  Attributes
+		:portolio_id:integer
+		:amount:integer (how many coins were bought/sold?)
+		:trade_type:string - (did I buy or sell?)
+		:date:datetime - (when did I make the trade?) 
+		:currency_symbol:string - (“BTC”, "LTC", "ETH")
