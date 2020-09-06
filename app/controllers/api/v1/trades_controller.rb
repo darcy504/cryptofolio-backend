@@ -21,7 +21,8 @@ class Api::V1::TradesController < ApplicationController
   end
 
   def destroy
-
+    @trade = Trade.find(params[:id])
+    @trade.destroy
   end
 
   private
