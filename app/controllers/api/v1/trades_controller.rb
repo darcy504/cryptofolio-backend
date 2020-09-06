@@ -7,13 +7,16 @@ class Api::V1::TradesController < ApplicationController
     render json: @trades
   end
 
+  def show
+    @trade = Trade.find(params[:id])
+    render json: @trade
+  end
+
+
   def create
 
   end
 
-  def show
-  
-  end
 
   def destroy
     
