@@ -16,11 +16,12 @@ class Api::V1::PortfoliosController < ApplicationController
   end
 
   def show
-
+    @portfolio = Portfolio.find(params[:id])
+    render json: @portfolio
   end
 
   def destroy
-
+  
   end
 
   private
