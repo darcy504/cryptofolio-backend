@@ -19,7 +19,7 @@ class Api::V1::TradesController < ApplicationController
     # We will not see the trade in our potfolio if the portfolio balance is not greater than that trade amount
     if @portfolio.update_balance(@trade) != "Insufficient balance."
       @trade.save
-      render json: @trade
+      render json: @portfolio
     else
       render json: {error: "Could not complete trade, insufficient portfolio balance."}
     end
@@ -39,7 +39,7 @@ class Api::V1::TradesController < ApplicationController
   end
 
   # Specifies the attributes a trade can be created with
-  def portfolio_params
+  def trade_params
     params.require(:trade).permit(:portfolio_id, :trade_type, :amount, :currency_symbol, :date)
   end
 end
