@@ -27,7 +27,14 @@ class Api::V1::TradesController < ApplicationController
 
 
   def destroy
-    
+    @trade = Trade.find(params["id"])
+    @portfolio = Portfolio.find(@trade.portfolio_id)
+    if @portfolio.update_balance_on_delete(@trade)
+      @trade.destroy
+      render json: @portfolio
+    else
+      render json: {errors: 'Insufficient balance.'}
+    end
   end
 
   private

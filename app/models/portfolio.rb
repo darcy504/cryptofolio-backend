@@ -21,4 +21,18 @@ class Portfolio < ApplicationRecord
       end
     end
   end
+
+  def update_balance_on_delete(trade)
+    if trade.trade_type == 'buy'
+      if self.balance >= trade.amount
+      self.balance = self.balance - trade.amount
+      self.save
+    else 
+      return "Insufficient balance."
+    end
+    elsif trade.trade_type == 'sell'
+        self.balance = self.balance + trade.amount
+        self.save
+    end
+  end
 end
